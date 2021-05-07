@@ -1,5 +1,11 @@
+@import 'settings';
+
 $topbar-responsive-bg: #2c3840;
 $topbar-responsive-animation-type: fade-in; // or use slide-down or none
+
+#navigation {
+  background-color: $topbar-responsive-bg;
+}
 
 .topbar-responsive {
   background: $topbar-responsive-bg;

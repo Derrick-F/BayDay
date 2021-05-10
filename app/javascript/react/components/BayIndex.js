@@ -46,13 +46,3 @@ const BayIndex = (props) => {
 
 
 export default BayIndex
-
-
-// In app.js build React Router with at least on route. (Peep week 4)
-
-// make bay index component with an H1
-
-// then in rails make an API endpoint. /api/v1/bays (reference week 6)
-
-// Then come back to React and fETCH IN Bays index... Test it by console.log
-// If that works you can create the bay tile and use .mao to out all bays on the page (week 3/4)

@@ -8,9 +8,4 @@ const BayComponent = (props) => {
 }
 
 
-// const BayComponent = (props) => {
-//   return(console.log(props.match))
-// }
-
-
 export default BayComponent

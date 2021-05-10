@@ -3,6 +3,3 @@ class BayController < ApplicationController
     @bays = Bay.all
   end
 end
-
-
-    

@@ -29,8 +29,8 @@ const BayIndex = (props) => {
     )
   })
 
-  return(<div class="grid-container">  
-      <div class="grid-x grid-margin-x grid-margin-y">
+  return(<div className="grid-container">  
+      <div className="grid-x grid-margin-x grid-margin-y">
       {bayTileArray}
     </div>  
   </div>)

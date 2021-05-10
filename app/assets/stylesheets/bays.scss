@@ -111,3 +111,9 @@ $topbar-responsive-animation-type: fade-in; // or use slide-down or none
   }
 }
 
+.BayName {
+
+  &:hover {
+    font-weight: bold;
+  }
+}

@@ -7,5 +7,4 @@ const BayComponent = (props) => {
   )
 }
 
-
 export default BayComponent

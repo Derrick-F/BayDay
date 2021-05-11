@@ -36,13 +36,4 @@ const BayIndex = (props) => {
   </div>)
 }
 
-
-
-
-
-
-
-
-
-
 export default BayIndex

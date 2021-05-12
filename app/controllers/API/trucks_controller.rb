@@ -1,4 +1,4 @@
-class Api::V1::ReviewsController < ApplicationController
+class Api::V1::TrucksController < ApplicationController
 
   def index
     render json: Truck.all

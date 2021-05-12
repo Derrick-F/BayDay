@@ -12,3 +12,7 @@ bay3 = Bay.create({id: 3, number: 3})
 bay4 = Bay.create({id: 4, number: 4})
 bay5 = Bay.create({id: 5, number: 5})
 bay6 = Bay.create({id: 6, number: 6})
+
+truck1 = Truck.create({company: 'Penske', make: 'Freightliner', model: 'Cascadia', vin: '15728R3HG8I95SCVN'})
+truck2 = Truck.create({company: 'DCP', make: 'Kenworth', model: 'Aerodyne', vin: 'FUK28R3HG8I95SCVN'})
+truck3 = Truck.create({company: 'Ryder', make: 'Freightliner', model: 'M2', vin: 'GVB28R3HG8I95SCVN'})

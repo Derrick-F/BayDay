@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react"
+import TruckForm from "./TruckForm"
 
 const TruckIndex = (props) => {
-
+  const [trucks, setTrucks] = useState([])
+  
   return(
-    <h1>Trucks checked into yard</h1>
-  )
+  
+  
+  <div><TruckForm/></div>)
+  
 }
-
 export default TruckIndex

@@ -25,8 +25,9 @@ const TruckForm = (props) => {
 
   return(
     
-    <div>
+    <div class="translucent-form-overlay">
       <form onSubmit={handleSubmit}>
+        <h3>Check in a Truck</h3>
         <div>
           <label htmlFor="company">company</label>
           <input name="company"
@@ -70,5 +71,6 @@ const TruckForm = (props) => {
     </div>
   )
 }
+
 
 export default TruckForm

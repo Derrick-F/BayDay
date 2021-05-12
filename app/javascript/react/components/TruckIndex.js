@@ -4,10 +4,12 @@ import TruckForm from "./TruckForm"
 const TruckIndex = (props) => {
   const [trucks, setTrucks] = useState([])
   
-  return(
+  return( 
+  <div>
+    <TruckForm/>
+    <h2 class="type-sidelines custom-2"><span>Trucks in yard</span></h2>
+  </div>
   
-  
-  <div><TruckForm/></div>)
-  
+  )
 }
 export default TruckIndex

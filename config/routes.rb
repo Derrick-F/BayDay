@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :bays, only: [:index, :show, :new, :create] 
       resources :trucks, only: [:index, :create]
       resources :jobs, only: [:index, :create]
+      resources :technicians, only: [:index, :show, :new, :create]
     end
   end
 end

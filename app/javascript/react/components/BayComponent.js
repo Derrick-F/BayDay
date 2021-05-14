@@ -3,7 +3,9 @@ import React, { useState, useEffect } from "react"
 const BayComponent = (props) => {
   const brandId = (props.match.params.id)
   return(
-    <h1>{`${brandId}`}</h1>
+    <div>
+      <h2 className="type-sidelines custom-2"><span>{`Status on Bay ${brandId}`}</span></h2>
+    </div>
   )
 }
 

@@ -11,12 +11,25 @@ const TruckForm = (props) => {
 
   const handleSubmit = event => {
       event.preventDefault()
-      setTruck(event.currentTarget.value)
+      setNewTruck(event.currentTarget.value)
+      props.addTruck(newTruck)
+      handleClearForm()
+  }
+
+  const handleClearForm = () => {
+    setNewTruck({
+      company: "",
+      make: "",
+      model: "",
+      vin: "",
+      unit_number: "",
+      id: null
+    })
   }
 
   const handleChange = event => {
     event.preventDefault()
-    setTruck({
+    setNewTruck({
       ... newTruck,
       [event.currentTarget.name]: event.currentTarget.value
     })
@@ -25,7 +38,7 @@ const TruckForm = (props) => {
 
   return(
     
-    <div class="translucent-form-overlay">
+    <div className="translucent-form-overlay">
       <form onSubmit={handleSubmit}>
         <h3>Check in a Truck</h3>
         <div>

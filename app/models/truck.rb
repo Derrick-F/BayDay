@@ -3,6 +3,5 @@ class Truck < ApplicationRecord
   validates :make, presence: true
   validates :model, presence: true
   validates :vin, presence: true
-  validates :unit_number
 
 end

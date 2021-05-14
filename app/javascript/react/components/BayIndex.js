@@ -25,11 +25,12 @@ const BayIndex = (props) => {
   
   const bayTileArray = bays.map((bay) => {
     return (
-      <BayTile key={bay.id} number={bay.number} />
+        <BayTile key={bay.id} number={bay.number} />
     )
   })
 
-  return(<div className="grid-container">  
+  return(
+  <div className="grid-container">  
       <div className="grid-x grid-margin-x grid-margin-y">
       {bayTileArray}
     </div>  

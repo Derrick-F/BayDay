@@ -1,4 +1,5 @@
 class Api::V1::TrucksController < ApplicationController
+  protect_from_forgery unless: -> { request.format.json? }
 
   def index
     render json: Truck.all
@@ -6,7 +7,6 @@ class Api::V1::TrucksController < ApplicationController
 
   def create
     truck = Truck.new(truck_params)
-    
     if truck.save 
       render json: Truck.all
     else
@@ -17,7 +17,7 @@ class Api::V1::TrucksController < ApplicationController
   private
 
   def truck_params
-    params.require(:truck).permit(:company, :unit, :make, :model, :vin)
+    params.require(:truck).permit(:company, :unit_number, :make, :model, :vin)
   end
 
 end

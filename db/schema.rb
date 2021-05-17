@@ -24,8 +24,12 @@ ActiveRecord::Schema.define(version: 2021_05_14_144036) do
   create_table "jobs", force: :cascade do |t|
     t.string "category", null: false
     t.string "description", null: false
+    t.bigint "truck_id", null: false
+    t.bigint "bay_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["bay_id"], name: "index_jobs_on_bay_id"
+    t.index ["truck_id"], name: "index_jobs_on_truck_id"
   end
 
   create_table "technicians", force: :cascade do |t|
@@ -40,8 +44,10 @@ ActiveRecord::Schema.define(version: 2021_05_14_144036) do
     t.string "make", null: false
     t.string "model", null: false
     t.string "vin", null: false
+    t.bigint "job_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["job_id"], name: "index_trucks_on_job_id"
   end
 
   create_table "users", force: :cascade do |t|

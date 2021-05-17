@@ -7,6 +7,7 @@ class CreateTrucks < ActiveRecord::Migration[5.2]
       t.string :model, null: false
       t.string :vin, null: false
 
+      t.belongs_to :job
       t.timestamps null: false
     end
   end

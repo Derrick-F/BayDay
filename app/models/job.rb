@@ -4,6 +4,4 @@ class Job < ApplicationRecord
 
   # has_many :assignments
   # has_many :technicians, through: :assignments
-  # 
-
 end

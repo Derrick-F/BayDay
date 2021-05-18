@@ -4,4 +4,6 @@ class Truck < ApplicationRecord
   validates :model, presence: true
   validates :vin, presence: true
 
+  has_many :jobs
+
 end

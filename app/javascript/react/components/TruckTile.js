@@ -1,7 +1,6 @@
 import React from 'react'
 
 const TruckTile = (props) => {
-  debugger
   return(
     
       <tr>

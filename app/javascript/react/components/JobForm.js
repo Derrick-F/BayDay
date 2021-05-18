@@ -4,7 +4,8 @@ const JobForm = (props) => {
   const [newJob, setNewJob] = useState({
     category: '',
     description: '',
-    truckId: ''
+    truckId: '',
+    bay_id: props.bay_id
   })
  
   const [trucks, setTrucks] = useState([])
@@ -80,7 +81,7 @@ const JobForm = (props) => {
             onChange = {handleChange}
           />
 
-<label htmlFor="category">Category</label>
+<label htmlFor="description">Description</label>
           <input name="description"
             id = ""
             type = "text"

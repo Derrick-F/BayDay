@@ -90,8 +90,8 @@ const JobForm = (props) => {
           />
 
 
-        <input type="submit" value="Confirm Job" className="btn" />
-      </form> 
+        <input type="submit" value="Confirm Job" className="button secondary" />
+      </form>
     </div>
   )
 }

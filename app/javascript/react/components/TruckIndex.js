@@ -65,6 +65,7 @@ const TruckIndex = (props) => {
           <table className="responsive-card-table unstriped">
             <thead>
               <tr>
+                <th>ID Number</th>
                 <th>Company</th>
                 <th>Make</th>
                 <th>Model</th>

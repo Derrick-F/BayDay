@@ -4,6 +4,7 @@ const TruckTile = (props) => {
   return(
     
       <tr>
+        <td data-label="ID Number">{props.id}</td>
         <td data-label="company">{props.company}</td>
         <td data-label="make">{props.make}</td>
         <td data-label="model">{props.model}</td>

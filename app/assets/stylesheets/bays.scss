@@ -292,25 +292,36 @@ $responsive-card-table-label-bg: $light-gray;
   }
 }
 
-// .btn {
-//   display: inline-block;
-//   padding: 15px 25px;
-//   font-size: 24px;
-//   cursor: pointer;
-//   text-align: center;
-//   text-decoration: none;
-//   outline: none;
-//   color: #fff;
-//   background-color: #4CAF50;
-//   border: none;
-//   border-radius: 15px;
-//   box-shadow: 0 9px rgb(7, 7, 7);
-// }
+.bay-table {
+  background-color: $white;
+  border: solid 1px $medium-gray;
+  width: 85%;
+  text-align: center;
+  list-style-type: none;
+  display: block;
+  margin: auto;
 
-// .btn:hover {background-color: #3e8e41}
+  li {
+    border-bottom: dotted 1px $medium-gray;
+    padding: 0.875rem 1.125rem;
 
-// .btn:active {
-//   background-color: #3e8e41;
-//   box-shadow: 0 5px #666;
-//   transform: translateY(4px)
-// }
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .TruckId {
+    background-color: #2c3840;
+    font-size: 2rem;
+    border-bottom: 0;
+    color: white;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+
+

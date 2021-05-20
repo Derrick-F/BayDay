@@ -118,7 +118,7 @@ $topbar-responsive-animation-type: fade-in; // or use slide-down or none
   }
 }
 
-$translucent-form-overlay-max-width: 500px;
+$translucent-form-overlay-max-width: 600px;
 
 .translucent-form-overlay {
   max-width: $translucent-form-overlay-max-width;
@@ -294,15 +294,15 @@ $responsive-card-table-label-bg: $light-gray;
 
 .bay-table {
   background-color: $white;
-  border: solid 1px $medium-gray;
-  width: 85%;
+  border: solid 1px $black;
+  width: 75%;
   text-align: center;
   list-style-type: none;
   display: block;
   margin: auto;
 
   li {
-    border-bottom: dotted 1px $medium-gray;
+    border-bottom: solid 1px $black;
     padding: 0.875rem 1.125rem;
 
     &:last-child {
@@ -321,7 +321,3 @@ $responsive-card-table-label-bg: $light-gray;
     margin-bottom: 0;
   }
 }
-
-
-
-

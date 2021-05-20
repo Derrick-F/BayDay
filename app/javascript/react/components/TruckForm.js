@@ -78,7 +78,7 @@ const TruckForm = (props) => {
             onChange = {handleChange}
           />
 
-        <input type="submit" value="Check In Truck" className="btn" />
+        <input type="submit" value="Check In Truck" className="button secondary" />
         </div>
       </form> 
     </div>

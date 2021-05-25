@@ -310,3 +310,11 @@ Devise.setup do |config|  config.secret_key = Rails.application.secret_key_base
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
 end
+
+Warden::Manager.after_set_user do |user,auth,opts|
+  auth.cookies[:signed_in] = true
+end
+
+Warden::Manager.before_logout do |user,auth,opts|
+  auth.cookies.delete :signed_in
+end

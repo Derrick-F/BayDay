@@ -67,6 +67,7 @@ const JobForm = (props) => {
         <h3>Add a job</h3>
         <div>
         
+        <label>Customer</label>
         <select name = "truckId" onChange={handleChange}>
           {truckOptions}
         </select>
@@ -90,7 +91,7 @@ const JobForm = (props) => {
           />
 
 
-        <input type="submit" value="Confirm Job" className="button secondary" />
+        <input type="submit" value="Create Job" className="button secondary" />
       </form>
     </div>
   )

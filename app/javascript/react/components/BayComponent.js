@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import JobForm from "./JobForm"
 import JobTile from "./JobTile"
+import BayIndex from "./BayIndex"
 
 const BayComponent = (props) => {
   const [jobs, setJobs] = useState([])
@@ -49,30 +50,77 @@ const BayComponent = (props) => {
     }
   }
 
+  const deleteJob = async (id) => {
+    try{
+      const response = await fetch(`/api/v1/jobs/${id}`, {
+        credentials: "same-origin",
+        method: "DELETE",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      })
+      console.log("finished")
+
+      let newJobs = jobs.filter(j => {
+        return j.id != id;
+      })
+      setJobs(newJobs);
+      
+    } catch(err) {
+        console.error(`Error in post fetch: ${err.message}`)
+    }
+  }
+
   const eachJob = jobs.map( (job) => {
     if (job.bay_id === parseInt(bayId)) {
       return(
-        <JobTile id={job.id} key={job.id} category={job.category} description={job.description} truck_id={job.truck_id}/>
+        <JobTile id={job.id} key={job.id} category={job.category} description={job.description} truck_id={job.truck_id} deleteJob={deleteJob}/>
       )
     }
   })
 
-  return(
-    <div>
-      <div>
-        <h2 className="type-sidelines custom-2"><span>{`Status on Bay ${bayId}`}</span></h2>
-      </div>
+  const cookie = document.cookie.match(/^(.*;)?\s*signed_in\s*=\s*[^;]+(.*)?$/)
+  if (cookie) {
 
+    return(
       <div>
-        {eachJob}
-      </div>
+        <div>
+          <h2 className="type-sidelines custom-2"><span>{`Status on Bay ${bayId}`}</span></h2>
+        </div>
 
-      <div>
-        <h2 className="type-sidelines custom-2"><span>{`Assign a job below.`}</span></h2>
-        <JobForm addJob={addJob} bay_id={props.match.params.id}/>
+        <div>
+          {eachJob}
+        </div>
+
+        <div>
+          <h2 className="type-sidelines custom-2"><span>{`Assign a Job`}</span></h2>
+          <JobForm addJob={addJob} bay_id={props.match.params.id}/>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
+
+  else {
+
+    return(
+      <div>
+        <div>
+          <h2 className="type-sidelines custom-2"><span>{`Status on Bay ${bayId}`}</span></h2>
+        </div>
+
+        <div>
+          {eachJob}
+        </div>
+
+        <div>
+          <h2 className="type-sidelines custom-2"><span>Assign a Job</span></h2>
+          <p className="signInWarning">You must <a href="/users/sign_in">sign in</a> to add a job.</p>
+        </div>
+      </div>
+    )    
+
+  }
 }
 
 export default BayComponent

@@ -1,5 +1,5 @@
-class BayController < ApplicationController
-  def index
-    @bays = Bay.all
-  end
-end
+# class BayController < ApplicationController
+#   def index
+#     @bays = Bay.all
+#   end
+# end

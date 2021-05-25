@@ -5,13 +5,13 @@ const JobTile = (props) => {
   
   <div>
    
-    <ul class="bay-table">
-      <li class="TruckId">Truck Yard ID# {props.truck_id}</li>
+    <ul className="bay-table">
+      <li className="TruckId">Truck Yard ID# {props.truck_id}</li>
       <li><b>Work Category</b></li>
       <li>{props.category}</li>
       <li><b>Work Description</b></li>
       <li>{props.description}</li>
-      <li><a class="button" href="#">Mark as Complete</a></li>
+      <li><span onClick={() => props.deleteJob(props.id)} className="button">Mark as Complete</span></li>
     </ul>
 
   </div>

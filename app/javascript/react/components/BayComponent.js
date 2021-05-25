@@ -49,10 +49,32 @@ const BayComponent = (props) => {
     }
   }
 
+  const deleteJob = async (id) => {
+    try{
+      const response = await fetch(`/api/v1/jobs/${id}`, {
+        credentials: "same-origin",
+        method: "DELETE",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      })
+      console.log("finished")
+
+      let newJobs = jobs.filter(j => {
+        return j.id != id;
+      })
+      setJobs(newJobs);
+      
+    } catch(err) {
+        console.error(`Error in post fetch: ${err.message}`)
+    }
+  }
+
   const eachJob = jobs.map( (job) => {
     if (job.bay_id === parseInt(bayId)) {
       return(
-        <JobTile id={job.id} key={job.id} category={job.category} description={job.description} truck_id={job.truck_id}/>
+        <JobTile id={job.id} key={job.id} category={job.category} description={job.description} truck_id={job.truck_id} deleteJob={deleteJob}/>
       )
     }
   })

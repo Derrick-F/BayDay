@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :bays, only: [:index, :show, :new, :create] 
       resources :trucks, only: [:index, :create]
-      resources :jobs, only: [:index, :create]
+      resources :jobs, only: [:index, :create, :destroy]
       resources :technicians, only: [:index, :show, :new, :create]
     end
   end

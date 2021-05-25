@@ -17,6 +17,16 @@ class Api::V1::JobsController < ApplicationController
       end
     end
 
+  def destroy
+    job = Job.find(params[:id])
+
+    if job.destroy
+      head :no_content
+    else
+      render json: {errors: truck.errors.full_messages}
+    end
+  end
+
     private
 
   def job_params

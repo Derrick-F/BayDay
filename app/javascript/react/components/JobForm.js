@@ -75,7 +75,7 @@ const JobForm = (props) => {
 
         </div>
 
-        <label htmlFor="category"><span class="require">*</span>Category</label>
+        <label htmlFor="category"><span class="require">*</span>Work Category</label>
           <input name="category"
             id = ""
             type = "text"

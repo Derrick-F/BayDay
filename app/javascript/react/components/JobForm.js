@@ -67,14 +67,15 @@ const JobForm = (props) => {
         <h3>Add a job</h3>
         <div>
         
-        <label>Customer</label>
+        <label><span class="require">*</span>Customer</label>
         <select name = "truckId" onChange={handleChange}>
+          <option value="" disabled selected>Select customer</option>
           {truckOptions}
         </select>
 
         </div>
 
-        <label htmlFor="category">Category</label>
+        <label htmlFor="category"><span class="require">*</span>Category</label>
           <input name="category"
             id = ""
             type = "text"
@@ -82,7 +83,7 @@ const JobForm = (props) => {
             onChange = {handleChange}
           />
 
-<label htmlFor="description">Description</label>
+<label htmlFor="description"><span class="require">*</span>Description</label>
           <input name="description"
             id = ""
             type = "text"

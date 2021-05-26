@@ -42,35 +42,35 @@ const TruckForm = (props) => {
       <form onSubmit={handleSubmit}>
         <h3>Check in a Truck</h3>
         <div>
-          <label htmlFor="company">Company</label>
+          <label htmlFor="company"><span class="require">*</span>Company</label>
           <input name="company"
             id = ""
             type = "text"
             value = {newTruck.company}
             onChange = {handleChange}
           />
-          <label htmlFor="make">Make</label>
+          <label htmlFor="make"><span class="require">*</span>Make</label>
           <input name="make"
             id = ""
             type = "text"
             value = {newTruck.make}
             onChange = {handleChange}
           />
-          <label htmlFor="model">Model</label>
+          <label htmlFor="model"><span class="require">*</span>Model</label>
           <input name="model"
             id = ""
             type = "text"
             value = {newTruck.model}
             onChange = {handleChange}
           />
-          <label htmlFor="vin">VIN</label>
+          <label htmlFor="vin"><span class="require">*</span>VIN</label>
           <input name="vin"
             id = ""
             type = "text"
             value = {newTruck.vin}
             onChange = {handleChange}
           />
-          <label htmlFor="unit_number">unit number</label>
+          <label htmlFor="unit_number">Unit Number</label>
           <input name="unit_number"
             id = ""
             type = "text"

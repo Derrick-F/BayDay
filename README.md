@@ -1,4 +1,6 @@
-Overview: BayDay is a simple, easy to use vehicle maintenance bay status app which helps the user track work being done in a service shop's bays. The graphical interface let's the user simply check a bay and see what if any vehicle is being worked on, and what the status of it is. What's more, we can get a description of details for the job and which technician is working on it. A logged in user can add new trucks and jobs to the system as well. 
+Overview: BayDay is a simple, easy to use vehicle maintenance bay status app which helps the user track work being done in a service shop's bays. The graphical interface lets the user simply check a bay and see what if any vehicle is being worked on, and what the status of it is. What's more, we can get a description of details for the job. A logged in user can add new trucks and jobs to the system as well. What's more, there will incoming feature for specific customer's indivisual trucks and for technicians working on trucks.
+
+Link to app here: https://bayday.herokuapp.com/
 
 https://app.codeship.com/projects/dd058dbf-e19d-45ca-b5e7-f9a03ea103b9/status?branch=master
 

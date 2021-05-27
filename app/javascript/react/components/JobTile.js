@@ -10,7 +10,7 @@ const JobTile = (props) => {
     <div>
     
       <ul className="bay-table">
-        <li className="TruckId">Truck Yard ID# {props.truck_id}</li>
+        <li className="TruckId">Truck ID #{props.truck_id}</li>
         <li><b>Work Category</b></li>
         <li>{props.category}</li>
         <li><b>Work Description</b></li>

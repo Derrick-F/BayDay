@@ -76,12 +76,13 @@ const JobForm = (props) => {
         </div>
 
         <label htmlFor="category"><span class="require">*</span>Work Category</label>
-          <input name="category"
-            id = ""
-            type = "text"
-            value = {newJob.category}
-            onChange = {handleChange}
-          />
+          <select name="category" value={newJob.category} onChange={handleChange}>
+          <option value="" disabled selected>Select Category</option>
+            <option value="Maintenance">Maintenance</option>
+            <option value="Repair">Repair</option>
+            <option value="Diagnostic">Diagnostic</option>
+            <option value="Warranty">Warranty</option>
+          </select>
 
 <label htmlFor="description"><span class="require">*</span>Description</label>
           <textarea rows="3" name="description"

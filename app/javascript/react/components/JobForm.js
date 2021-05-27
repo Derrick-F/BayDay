@@ -84,7 +84,7 @@ const JobForm = (props) => {
           />
 
 <label htmlFor="description"><span class="require">*</span>Description</label>
-          <input name="description"
+          <textarea rows="3" name="description"
             id = ""
             type = "text"
             value = {newJob.description}

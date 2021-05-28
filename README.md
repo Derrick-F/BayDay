@@ -1,4 +1,4 @@
-Overview: BayDay is a simple, easy to use vehicle maintenance bay status app which helps the user track work being done in a service shop's bays. The graphical interface lets the user simply check a bay and see what if any vehicle is being worked on, and what the status of it is. What's more, we can get a description of details for the job. A logged in user can add new trucks and jobs to the system as well. What's more, there will incoming feature for specific customer's indivisual trucks and for technicians working on trucks.
+Overview: BayDay is a simple, easy to use vehicle maintenance bay status app which helps the user track work being done in a service shop's bays. The graphical interface lets the user simply check a bay and see what if any vehicle is being worked on, and what the status of it is. What's more, we can get a description of details for the job. A logged in user can add new trucks and jobs to the system as well.
 
 Link to app here: https://bayday.herokuapp.com/
 
@@ -21,4 +21,4 @@ To view the app in development locally at https://localhost:3000/ Run the follow
 
 $ rails s $ yarn start
 
-Currently in development: Main Bay menu which will display each bay, see if it is filled and click on it to view more details of the working being conducted. 
+Currently in development: Main Bay menu which will display each bay, for demo purposes is defaulted to 6. More or less will be able to be changed to the exact number for the shop using the app. More details will be added to the job once completed as well such a truck details and a technician working on the job.

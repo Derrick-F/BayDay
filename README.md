@@ -21,4 +21,4 @@ To view the app in development locally at https://localhost:3000/ Run the follow
 
 $ rails s $ yarn start
 
-More features to come as well!
+More features to come as well in future updates... 

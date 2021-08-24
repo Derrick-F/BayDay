@@ -21,4 +21,4 @@ To view the app in development locally at https://localhost:3000/ Run the follow
 
 $ rails s $ yarn start
 
-Currently in development: Main Bay menu which will display each bay, for demo purposes is defaulted to 6. More or less will be able to be changed to the exact number for the shop using the app. More details will be added to the job once completed as well such a truck details and a technician working on the job.
+More features to come as well!
